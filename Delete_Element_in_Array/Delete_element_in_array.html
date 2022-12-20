@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Element In Array</title>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="Enter Position" />
+    <button onclick="deleteElement()">Add</button>
+  </body>
+</html>
+<script>
+  function deleteElement() {
+    let arr = [10, 20, 30, 40, 50];
+    let position = document.getElementById("position").value;
+    position = parseInt(position);
+    for (let a = position; a < arr.length - 1; a++) {
+      arr[a] = arr[a + 1];
+    }
+    arr.length = arr.length - 1;
+    document.write(...arr);
+  }
+</script>
+<script src="./index.js"></script>
