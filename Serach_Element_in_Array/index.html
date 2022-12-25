@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="item" placeholder="Enter Value" />
+    <button onclick="Searchitem()">Serach</button>
+  </body>
+</html>
+<script src="./index.js"></script>
+<script>
+  function Searchitem() {
+    let arr = [20, 30, 40, 60, 70, 80, 90, 100, 120, 320, 150];
+    let item = document.getElementById("item").value;
+    let index=undefined
+    for (let a = 0; a < arr.length ; a++) {
+      if (arr[a] == item) {
+        index = a;
+        break
+      }
+    }
+    document.write(index)
+    console.log(index);
+  }
+</script>
